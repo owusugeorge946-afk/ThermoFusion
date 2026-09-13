@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the ThermoFusion manuscript and repository."
+title: "ThermoFusion"
+type: software
+authors:
+  - family-names: "Amoah"
+    given-names: "George Owusu"
+repository-code: "TO_BE_ADDED"
+date-released: "2026-09-13"

@@ -1,0 +1,28 @@
+# ThermoFusion public configuration template
+# Replace paths locally. Do not place credentials in this file.
+
+project:
+  name: ThermoFusion
+  random_seed: 20260908
+
+paths:
+  google_drive_root: "/content/drive/MyDrive"
+  project_root: "/content/drive/MyDrive/ThermoFusion"
+
+earth_engine:
+  # Set this locally to the Earth Engine cloud project used for your account.
+  cloud_project: null
+
+model:
+  raster_channels: 16
+  contextual_variables: 9
+  total_inputs: 25
+  batch_size: 2
+  max_epochs: 80
+  learning_rate: 0.0002
+  weight_decay: 0.00001
+
+inference:
+  tta_views: 8
+  conformal_q: 4.6028
+  uncertainty_floor_c: 0.50

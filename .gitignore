@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local configuration / credentials
+.env
+*.env
+credentials*
+service-account*.json
+
+# Large data
+*.tif
+*.tiff
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+data/raw/
+data/processed/
+
+# OS
+.DS_Store
+Thumbs.db

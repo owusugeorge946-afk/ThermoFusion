@@ -1,0 +1,74 @@
+Cell,Decision,Purpose,Reason,GitHub target
+1,MERGE,Earth Engine authentication/initialization utility,Merge into setup/config documentation; not a standalone scientific stage.,config/setup_earth_engine.md
+2,DROP,Stage 01 older version,Superseded by Cell 3.,
+3,KEEP,Stage 01 final city-asset and thermal-scene availability audit,Retain as authoritative Stage 01 implementation.,scripts/01_audit_city_assets_and_thermal_availability.py
+4,KEEP,Stage 02 pixel-level thermal coverage audit,Required to build the thermal-scene inventory used downstream.,scripts/02_audit_thermal_coverage.py
+5,DROP,Stage 03 earlier verification version,Superseded by Cell 6.,
+6,KEEP,Stage 03 final Stage 02 verification and analysis,Retain final verification logic.,scripts/03_verify_thermal_audit.py
+7,KEEP,Stage 04 leakage-safe scene selection and split design,Core experimental-design script.,scripts/04_select_scenes_and_splits.py
+8,DROP,Blank cell,No content.,
+9,DROP,Stage 05 earlier multisensor matching version,Superseded by later Stage 05 versions.,
+10,DROP,Stage 05 intermediate multisensor matching version,Superseded by later Stage 05 versions.,
+11,DROP,Stage 05 intermediate multisensor matching version,Superseded by Cell 12.,
+12,KEEP,Stage 05 final multisensor temporal matching,"Retain final matching logic for Sentinel-2, Sentinel-1 and ancillary inputs.",scripts/05_match_multisensor_inputs.py
+13,KEEP,Stage 06 multisensor-match verification,Required QA before pilot construction.,scripts/06_verify_multisensor_matches.py
+14,KEEP,Stage 07 balanced pilot construction,Defines the balanced 64-scene benchmark/pilot manifest.,scripts/07_build_balanced_pilot.py
+15,DROP,Stage 08 earlier alignment-test export,Superseded by Cell 18.,
+16,DROP,Stage 08 intermediate alignment-test export,Superseded by Cell 18.,
+17,DROP,Stage 09 earlier alignment verification,Superseded by Cell 19.,
+18,KEEP,Stage 08 final alignment-test chip export,Retain final joint-valid export logic.,scripts/08_export_alignment_test_chips.py
+19,KEEP,Stage 09 final alignment verification,Retain final spatial/grid QA logic.,scripts/09_verify_alignment.py
+20,DROP,Stage 10 earlier 64-scene export,Superseded by later Stage 10 versions.,
+21,DROP,Stage 10 intermediate 64-scene export,Superseded by Cell 22.,
+22,KEEP,Stage 10 final complete 64-scene dataset export,Core production export using the final preflight/processing contract.,scripts/10_export_balanced_dataset.py
+23,ARCHIVE,Stage 11 initial 64-scene QA,"Useful provenance because it identified failed bundles, but not the final verification script.",archive/23_stage11_initial_verification.py
+24,ARCHIVE,Stage 10R repair export,Keep for provenance of repaired bundles; do not expose as the primary workflow.,archive/24_stage10R_repair_failed_bundles.py
+25,KEEP,Stage 11 final 64-scene QA,Authoritative verification after repairs.,scripts/11_verify_balanced_dataset.py
+26,KEEP,Stage 12 model-ready array preparation,Core leakage-safe array/tensor construction and frozen normalization.,scripts/12_prepare_model_arrays.py
+27,KEEP,Stage 13 baseline U-Net training/evaluation,Required baseline experiment.,scripts/13_train_baseline_unet.py
+28,KEEP,Stage 14 metadata-conditioned residual U-Net and fair baselines,Core ThermoFusion benchmark implementation.,scripts/14_train_thermofusion.py
+29,KEEP,Stage 15 calibration/bootstrap analysis,Required calibration and paired statistical inference stage.,scripts/15_calibration_and_bootstrap.py
+30,KEEP,Stage 16 independently retrained modality ablations,Required ablation experiment.,scripts/16_modality_ablations.py
+31,KEEP,Stage 17 final validation-selected model and uncertainty analysis,"Core final-model inference, TTA and uncertainty analysis.",scripts/17_final_inference_and_uncertainty.py
+32,DROP,Stage 18 near-duplicate draft,Functionally superseded by Cell 33.,
+33,KEEP,Stage 18 final pilot-analysis/reproducibility compilation,Retain final reproducibility and summary-output compilation.,scripts/18_compile_reproducibility_package.py
+34,ARCHIVE,Stage 19 early publication graphics version,Superseded by later Stage 19 revisions.,archive/34_stage19_figures_v1.py
+35,ARCHIVE,Stage 19 publication graphics revision,Superseded by later revisions.,archive/35_stage19_figures_v2.py
+36,ARCHIVE,Stage 19 publication graphics revision,Superseded by later revisions.,archive/36_stage19_figures_v3.py
+37,ARCHIVE,Stage 19 publication graphics revision,Superseded by later revisions.,archive/37_stage19_figures_v4.py
+38,ARCHIVE,Stage 19 extended publication graphics revision,Superseded by later revisions.,archive/38_stage19_figures_v5.py
+39,DROP,Stage 19 duplicate/near-final revision,Superseded by Cell 41; Cell 40 is identical to Cell 39.,
+40,DROP,Stage 19 exact duplicate of Cell 39,No reason to publish duplicate code.,
+41,KEEP,Stage 19 final publication figures/tables,Use as the manuscript-figure reproduction source.,scripts/19_generate_manuscript_figures.py
+42,KEEP,LOCO Stage 01 model-ready dataset verification,Required geographical-transfer preflight.,scripts/20_loco_verify_dataset.py
+43,KEEP,LOCO Stage 02 leakage-safe fold construction,Defines the four geographical hold-out folds.,scripts/21_loco_build_folds.py
+44,ARCHIVE,LOCO CPU pilot for Abidjan,Pilot/debugging run; useful provenance but not part of the final production path.,archive/44_loco_cpu_pilot_abidjan.py
+45,KEEP,Final four-fold leave-one-city-out experiment,Authoritative LOCO experiment used in the manuscript.,scripts/22_run_loco_experiment.py
+46,MERGE,LOCO results ZIP packaging utility,Merge into repository release/export helper; not scientific analysis.,scripts/utils/package_loco_results.py
+47,ARCHIVE,Expanded temporal-test file audit,Exploratory file-discovery utility; not needed in the reproducible scientific path.,archive/47_expanded_test_file_audit.py
+48,DROP,Initial Stage 22 expanded temporal-test selection,Superseded by corrected Stage 22B.,
+49,DROP,Diagnostic inspection of initial Stage 22 selection,References superseded selection.,
+50,KEEP,Stage 22B corrected 38-scene expanded temporal-test selection,Authoritative selection for the original 38-scene external cohort.,scripts/23_select_external38.py
+51,MERGE,38-scene selection integrity checks,Merge into the end of Cell 50's cleaned script.,scripts/23_select_external38.py
+52,ARCHIVE,Initial Stage 23 export of 38 scenes,Superseded by replacement/final-preflight workflow.,archive/52_stage23_initial_external38_export.py
+53,ARCHIVE,Stage 23R replacement logic,Preserve provenance of spatial-preflight replacement procedure; not primary final script.,archive/53_stage23R_replacement.py
+54,ARCHIVE,Stage 23R2 final replacement adjustment,Preserve provenance; final export logic is Cell 55.,archive/54_stage23R2_final_replacement.py
+55,KEEP,Stage 23R2 final 38-scene preflight and GEE export,Authoritative external38 export implementation.,scripts/24_export_external38.py
+56,MERGE,External38 export task-status check,Merge as an optional status/check helper beside export code.,scripts/utils/check_external38_tasks.py
+57,DROP,Stage 24 initial exported-chip verification,Superseded by corrected verification stages.,
+58,ARCHIVE,Stage 24R corrected verification draft,Superseded by final corrected verification in Cell 59.,archive/58_stage24R_verification_draft.py
+59,KEEP,Stage 24R final corrected external38 chip verification,Authoritative verification for the 38-scene cohort.,scripts/25_verify_external38.py
+60,KEEP,Stage 25 external38 model-ready arrays,Required frozen-normalization preparation.,scripts/26_prepare_external38_arrays.py
+61,KEEP,Stage 26 frozen-model inference on external38,Required frozen evaluation.,scripts/27_infer_external38.py
+62,KEEP,"Stage 27 external38 results, paired effects and figures",Required statistical evaluation of original 38-scene stress test.,scripts/28_evaluate_external38.py
+63,KEEP,Stage 28 advanced external38 diagnostics atlas,Retain as manuscript/diagnostic figure generator.,scripts/figures/external38_diagnostics.py
+64,KEEP,Large external evaluation Stage 04A exact 65-scene spatial preflight,Required to document objective screening before inference.,scripts/29_preflight_external65.py
+65,KEEP,Large external evaluation Stage 04B export 52 verified scenes,Required production export for new external52 cohort.,scripts/30_export_external52.py
+66,MERGE,Large external evaluation Stage 04C verify batch 01,Merge with Cell 67 into one parameterized verification script.,scripts/31_verify_external52_exports.py
+67,MERGE,Large external evaluation Stage 04C verify batch 02,Merge with Cell 66 into one parameterized verification script.,scripts/31_verify_external52_exports.py
+68,KEEP,Large external evaluation Stage 05 model-ready arrays for external52,Required frozen-normalization preparation.,scripts/32_prepare_external52_arrays.py
+69,KEEP,Large external evaluation Stage 06 frozen-model inference on external52,Core 52-scene frozen inference.,scripts/33_infer_external52.py
+70,KEEP,Large external evaluation Stage 07 frozen baselines and paired bootstrap,Core inferential comparison for external52.,scripts/34_evaluate_external52.py
+71,KEEP,Expanded external evaluation Stage 08 integrate original38 + new52,Core integrated 90-scene evaluation and overlap audit.,scripts/35_integrate_external90.py
+72,KEEP,Stage 09 publication-quality spatial diagnostics for external90,Retain as final 90-scene figure-generation script.,scripts/figures/external90_spatial_diagnostics.py
+73,DROP,Standalone repeated Earth Engine authentication,Duplicate utility; handled by setup/config.,
