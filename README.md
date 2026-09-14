@@ -117,4 +117,14 @@ The file `docs/cell_audit.csv` documents which of the 73 Colab cells were retain
 
 The archived ThermoFusion reproducibility package is available on Zenodo:
 
-**DOI: 10.5281/zenodo.22747479
+DOI: 10.5281/zenodo.22747479
+## Authors
+
+**George Owusu Amoah¹\, Rachel Olawoyin¹, Francis Quayson²˒³
+
+¹ Department of Geography and Regional Planning, University of Cape Coast, Cape Coast, Ghana  
+² Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University, Hong Kong, China  
+³ Research Institute for Land and Space, The Hong Kong Polytechnic University, Hong Kong, China  
+
+\*Corresponding author: George Owusu Amoah  
+Email: george.amoah003@stu.ucc.edu.gh
