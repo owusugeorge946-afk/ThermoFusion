@@ -113,3 +113,8 @@ Large derived datasets should be deposited in Zenodo or another research-data re
 ## Provenance
 
 The file `docs/cell_audit.csv` documents which of the 73 Colab cells were retained, merged, archived, or dropped.
+## DOI
+
+The archived ThermoFusion reproducibility package is available on Zenodo:
+
+**DOI: 10.5281/zenodo.22747479
