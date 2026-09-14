@@ -1,9 +1,40 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the ThermoFusion manuscript and repository."
-title: "ThermoFusion"
+message: "If you use ThermoFusion, please cite the software and associated manuscript."
+
+title: "ThermoFusion: Metadata-conditioned multimodal Earth-observation learning for temporally transferable land-surface temperature reconstruction and uncertainty assessment"
+
 type: software
+
 authors:
   - family-names: "Amoah"
     given-names: "George Owusu"
-repository-code: "TO_BE_ADDED"
+    email: "george.amoah003@stu.ucc.edu.gh"
+    affiliation: "Department of Geography and Regional Planning, University of Cape Coast, Cape Coast, Ghana"
+
+  - family-names: "Olawoyin"
+    given-names: "Rachel"
+    affiliation: "Department of Geography and Regional Planning, University of Cape Coast, Cape Coast, Ghana"
+
+  - family-names: "Quayson"
+    given-names: "Francis"
+    affiliation: "Department of Land Surveying and Geospatial Science, The Hong Kong Polytechnic University, Hung Hom, Kowloon, Hong Kong, China"
+
+version: "1.0.0"
+
 date-released: "2026-09-13"
+
+doi: "10.5281/zenodo.22747479"
+
+repository-code: "YOUR_GITHUB_REPOSITORY_URL"
+
+keywords:
+  - "Earth observation"
+  - "land-surface temperature"
+  - "remote sensing"
+  - "GeoAI"
+  - "deep learning"
+  - "multimodal learning"
+  - "thermal remote sensing"
+  - "uncertainty"
+  - "temporal transfer"
+  - "urban climate"
